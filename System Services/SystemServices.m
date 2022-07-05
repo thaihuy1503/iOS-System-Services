@@ -391,9 +391,9 @@
     NSString *connectedToCellNetwork = ([self connectedToCellNetwork]) ? @"1" : @"0";
     NSString *processID = [NSString stringWithFormat:@"%d", [self processID]];
     NSString *diskSpace = [self diskSpace];
-    NSString *freeDiskSpaceNO = [self freeDiskSpaceinRaw];
+    //NSString *freeDiskSpaceNO = [self freeDiskSpaceinRaw];
     NSString *freeDiskSpaceYES = [self freeDiskSpaceinPercent];
-    NSString *usedDiskSpaceNO = [self usedDiskSpaceinRaw];
+   // NSString *usedDiskSpaceNO = [self usedDiskSpaceinRaw];
     NSString *usedDiskSpaceYES = [self usedDiskSpaceinPercent];
     NSString *longDiskSpace = [NSString stringWithFormat:@"%lld", [self longDiskSpace]];
     NSString *longFreeDiskSpace = [NSString stringWithFormat:@"%lld", [self longFreeDiskSpace]];
@@ -608,18 +608,18 @@
         // Invalid value
         diskSpace = @"Unknown";
     }
-    if (freeDiskSpaceNO == nil || freeDiskSpaceNO.length <= 0) {
-        // Invalid value
-        freeDiskSpaceNO = @"Unknown";
-    }
+//    if (freeDiskSpaceNO == nil || freeDiskSpaceNO.length <= 0) {
+//        // Invalid value
+//        freeDiskSpaceNO = @"Unknown";
+//    }
     if (freeDiskSpaceYES == nil || freeDiskSpaceYES.length <= 0) {
         // Invalid value
         freeDiskSpaceYES = @"Unknown";
     }
-    if (usedDiskSpaceNO == nil || usedDiskSpaceNO.length <= 0) {
-        // Invalid value
-        usedDiskSpaceNO = @"Unknown";
-    }
+//    if (usedDiskSpaceNO == nil || usedDiskSpaceNO.length <= 0) {
+//        // Invalid value
+//        usedDiskSpaceNO = @"Unknown";
+//    }
     if (usedDiskSpaceYES == nil || usedDiskSpaceYES.length <= 0) {
         // Invalid value
         usedDiskSpaceYES = @"Unknown";
@@ -765,9 +765,7 @@
                                                                  connectedToCellNetwork,
                                                                  processID,
                                                                  diskSpace,
-                                                                 freeDiskSpaceNO,
                                                                  freeDiskSpaceYES,
-                                                                 usedDiskSpaceNO,
                                                                  usedDiskSpaceYES,
                                                                  longDiskSpace,
                                                                  longFreeDiskSpace,
@@ -834,23 +832,21 @@
                                                                  @"ConnectedToCellNetwork",
                                                                  @"ProcessID",
                                                                  @"DiskSpace",
-                                                                 @"FreeDiskSpace (Not Formatted)",
-                                                                 @"FreeDiskSpace (Formatted)",
-                                                                 @"UsedDiskSpace (Not Formatted)",
-                                                                 @"UsedDiskSpace (Formatted)",
-                                                                 @"LongDiskSpace",
-                                                                 @"LongFreeDiskSpace",
-                                                                 @"TotalMemory",
-                                                                 @"FreeMemory (Not Formatted)",
-                                                                 @"FreeMemory (Formatted)",
-                                                                 @"UsedMemory (Not Formatted)",
-                                                                 @"UsedMemory (Formatted)",
-                                                                 @"ActiveMemory (Not Formatted)",
-                                                                 @"ActiveMemory (Formatted)",
-                                                                 @"InactiveMemory (Not Formatted)",
-                                                                 @"InactiveMemory (Formatted)",
-                                                                 @"WiredMemory (Not Formatted)",
-                                                                 @"WiredMemory (Formatted)",
+                                                                 @"FreeDiskSpace_percent",
+                                                                 @"UsedDiskSpace_percent",
+                                                                 @"LongDiskSpace_byte",
+                                                                 @"LongFreeDiskSpace_byte",
+                                                                 @"TotalMemory_mb",
+                                                                 @"FreeMemory_mb",
+                                                                 @"FreeMemory_percent",
+                                                                 @"UsedMemory_mb",
+                                                                 @"UsedMemory_percent",
+                                                                 @"ActiveMemory_mb",
+                                                                 @"ActiveMemory_percent",
+                                                                 @"InactiveMemory_mb",
+                                                                 @"InactiveMemory_percent",
+                                                                 @"WiredMemory_mb",
+                                                                 @"WiredMemory_percent",
                                                                  @"Country",
                                                                  @"Language",
                                                                  @"TimeZone",
