@@ -354,19 +354,19 @@
     NSString *screenWidth = [NSString stringWithFormat:@"%ld", (long)[self screenWidth]];
     NSString *screenHeight = [NSString stringWithFormat:@"%ld", (long)[self screenHeight]];
     NSString *screenBrightness = [NSString stringWithFormat:@"%f", [self screenBrightness]];
-    NSString *multitaskingEnabled = ([self multitaskingEnabled]) ? @"Yes" : @"No";
-    NSString *proximitySensorEnabled = ([self proximitySensorEnabled]) ? @"Yes" : @"No";
-    NSString *debuggerAttached = ([self debuggerAttached]) ? @"Yes" : @"No";
-    NSString *pluggedIn = ([self pluggedIn]) ? @"Yes" : @"No";
-    NSString *stepCountingAvailable = ([self stepCountingAvailable]) ? @"Yes" : @"No";
-    NSString *distanceAvailable = ([self distanceAvailable]) ? @"Yes" : @"No";
-    NSString *floorCountingAvailable = ([self floorCountingAvailable]) ? @"Yes" : @"No";
+    NSString *multitaskingEnabled = ([self multitaskingEnabled]) ? @"1" : @"0";
+    NSString *proximitySensorEnabled = ([self proximitySensorEnabled]) ? @"1" : @"0";
+    NSString *debuggerAttached = ([self debuggerAttached]) ? @"1" : @"0";
+    NSString *pluggedIn = ([self pluggedIn]) ? @"1" : @"0";
+    NSString *stepCountingAvailable = ([self stepCountingAvailable]) ? @"1" : @"0";
+    NSString *distanceAvailable = ([self distanceAvailable]) ? @"1" : @"0";
+    NSString *floorCountingAvailable = ([self floorCountingAvailable]) ? @"1" : @"0";
     NSString *jailbroken = [NSString stringWithFormat:@"%d", [self jailbroken]];
     NSString *numberProcessors = [NSString stringWithFormat:@"%ld", (long)[self numberProcessors]];
     NSString *numberActiveProcessors = [NSString stringWithFormat:@"%ld", (long)[self numberActiveProcessors]];
     NSString *processorsUsage = [NSString stringWithFormat:@"%@", [self processorsUsage]];
-    NSString *accessoriesAttached = ([self accessoriesAttached]) ? @"Yes" : @"No";
-    NSString *headphonesAttached = ([self headphonesAttached]) ? @"Yes" : @"No";
+    NSString *accessoriesAttached = ([self accessoriesAttached]) ? @"1" : @"0";
+    NSString *headphonesAttached = ([self headphonesAttached]) ? @"1" : @"0";
     NSString *numberAttachedAccessories = [NSString stringWithFormat:@"%ld", (long)[self numberAttachedAccessories]];
     NSString *nameAttachedAccessories = [self nameAttachedAccessories];
     NSString *carrierName = [self carrierName];
@@ -374,10 +374,10 @@
     NSString *carrierMobileCountryCode = [self carrierMobileCountryCode];
     NSString *carrierISOCountryCode = [self carrierISOCountryCode];
     NSString *carrierMobileNetworkCode = [self carrierMobileNetworkCode];
-    NSString *carrierAllowsVOIP = ([self carrierAllowsVOIP]) ? @"Yes" : @"No";
+    NSString *carrierAllowsVOIP = ([self carrierAllowsVOIP]) ? @"1" : @"0";
     NSString *batteryLevel = [NSString stringWithFormat:@"%f", [self batteryLevel]];
-    NSString *charging = ([self charging]) ? @"Yes" : @"No";
-    NSString *fullyCharged = ([self fullyCharged]) ? @"Yes" : @"No";
+    NSString *charging = ([self charging]) ? @"1" : @"0";
+//    NSString *fullyCharged = ([self fullyCharged]) ? @"1" : @"0";
     NSString *currentIPAddress = [self currentIPAddress];
     NSString *externalIPAddress = [self externalIPAddress];
     NSString *cellIPAddress = [self cellIPAddress];
@@ -387,8 +387,8 @@
     NSString *wiFiNetmaskAddress = [self wiFiNetmaskAddress];
     NSString *wiFiBroadcastAddress = [self wiFiBroadcastAddress];
     NSString *wiFiRouterAddress = [self wiFiRouterAddress];
-    NSString *connectedToWiFi = ([self connectedToWiFi]) ? @"Yes" : @"No";
-    NSString *connectedToCellNetwork = ([self connectedToCellNetwork]) ? @"Yes" : @"No";
+    NSString *connectedToWiFi = ([self connectedToWiFi]) ? @"1" : @"0";
+    NSString *connectedToCellNetwork = ([self connectedToCellNetwork]) ? @"1" : @"0";
     NSString *processID = [NSString stringWithFormat:@"%d", [self processID]];
     NSString *diskSpace = [self diskSpace];
     NSString *freeDiskSpaceNO = [self freeDiskSpaceinRaw];
@@ -408,16 +408,16 @@
     NSString *inactiveMemoryYES = [NSString stringWithFormat:@"%f", [self inactiveMemoryinPercent]];
     NSString *wiredMemoryNO = [NSString stringWithFormat:@"%f", [self wiredMemoryinRaw]];
     NSString *wiredMemoryYES = [NSString stringWithFormat:@"%f", [self wiredMemoryinPercent]];
-    NSString *purgableMemoryNO = [NSString stringWithFormat:@"%f", [self purgableMemoryinRaw]];
-    NSString *purgableMemoryYES = [NSString stringWithFormat:@"%f", [self purgableMemoryinPercent]];
-    NSString *deviceOrientation = [NSString stringWithFormat:@"%ld", (long)[self deviceOrientation]];
+    //NSString *purgableMemoryNO = [NSString stringWithFormat:@"%f", [self purgableMemoryinRaw]];
+    //NSString *purgableMemoryYES = [NSString stringWithFormat:@"%f", [self purgableMemoryinPercent]];
+   // NSString *deviceOrientation = [NSString stringWithFormat:@"%ld", (long)[self deviceOrientation]];
     NSString *country = [self country];
     NSString *language = [self language];
     NSString *timeZone = [self timeZoneSS];
     NSString *currency = [self currency];
-    NSString *applicationVersion = [self applicationVersion];
-    NSString *cFUUID = [self cfuuid];
-    NSString *cPUUsage = [NSString stringWithFormat:@"%f", [self applicationCPUUsage]];
+   // NSString *applicationVersion = [self applicationVersion];
+   // NSString *cFUUID = [self cfuuid];
+    //NSString *cPUUsage = [NSString stringWithFormat:@"%f", [self applicationCPUUsage]];
     
     // Check to make sure all values are valid (if not, make them)
     if (systemUptime == nil || systemUptime.length <= 0) {
@@ -552,10 +552,10 @@
         // Invalid value
         charging = @"Unknown";
     }
-    if (fullyCharged == nil || fullyCharged.length <= 0) {
-        // Invalid value
-        fullyCharged = @"Unknown";
-    }
+//    if (fullyCharged == nil || fullyCharged.length <= 0) {
+//        // Invalid value
+//        fullyCharged = @"Unknown";
+//    }
     if (currentIPAddress == nil || currentIPAddress.length <= 0) {
         // Invalid value
         currentIPAddress = @"Unknown";
@@ -676,18 +676,18 @@
         // Invalid value
         wiredMemoryYES = @"Unknown";
     }
-    if (purgableMemoryNO == nil || purgableMemoryNO.length <= 0) {
-        // Invalid value
-        purgableMemoryNO = @"Unknown";
-    }
-    if (purgableMemoryYES == nil || purgableMemoryYES.length <= 0) {
-        // Invalid value
-        purgableMemoryYES = @"Unknown";
-    }
-    if (deviceOrientation == nil || deviceOrientation.length <= 0) {
-        // Invalid value
-        deviceOrientation = @"Unknown";
-    }
+//    if (purgableMemoryNO == nil || purgableMemoryNO.length <= 0) {
+//        // Invalid value
+//        purgableMemoryNO = @"Unknown";
+//    }
+//    if (purgableMemoryYES == nil || purgableMemoryYES.length <= 0) {
+//        // Invalid value
+//        purgableMemoryYES = @"Unknown";
+//    }
+//    if (deviceOrientation == nil || deviceOrientation.length <= 0) {
+//        // Invalid value
+//        deviceOrientation = @"Unknown";
+//    }
     if (country == nil || country.length <= 0) {
         // Invalid value
         country = @"Unknown";
@@ -704,18 +704,18 @@
         // Invalid value
         currency = @"Unknown";
     }
-    if (applicationVersion == nil || applicationVersion.length <= 0) {
-        // Invalid value
-        applicationVersion = @"Unknown";
-    }
-    if (cFUUID == nil || cFUUID.length <= 0) {
-        // Invalid value
-        cFUUID = @"Unknown";
-    }
-    if (cPUUsage == nil || cPUUsage.length <= 0) {
-        // Invalid value
-        cPUUsage = @"Unknown";
-    }
+//    if (applicationVersion == nil || applicationVersion.length <= 0) {
+//        // Invalid value
+//        applicationVersion = @"Unknown";
+//    }
+//    if (cFUUID == nil || cFUUID.length <= 0) {
+//        // Invalid value
+//        cFUUID = @"Unknown";
+//    }
+//    if (cPUUsage == nil || cPUUsage.length <= 0) {
+//        // Invalid value
+//        cPUUsage = @"Unknown";
+//    }
     
     // Get all Information in a dictionary
     systemInformationDict = [NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:
@@ -752,7 +752,6 @@
                                                                  carrierAllowsVOIP,
                                                                  batteryLevel,
                                                                  charging,
-                                                                 fullyCharged,
                                                                  currentIPAddress,
                                                                  externalIPAddress,
                                                                  cellIPAddress,
@@ -783,16 +782,10 @@
                                                                  inactiveMemoryYES,
                                                                  wiredMemoryNO,
                                                                  wiredMemoryYES,
-                                                                 purgableMemoryNO,
-                                                                 purgableMemoryYES,
-                                                                 deviceOrientation,
                                                                  country,
                                                                  language,
                                                                  timeZone,
                                                                  currency,
-                                                                 applicationVersion,
-                                                                 cFUUID,
-                                                                 cPUUsage,
                                                                  nil]
                                                         forKeys:[NSArray arrayWithObjects:
                                                                  @"Uptime (dd hh mm)",
@@ -828,7 +821,6 @@
                                                                  @"CarrierAllowsVOIP",
                                                                  @"BatteryLevel",
                                                                  @"Charging",
-                                                                 @"FullyCharged",
                                                                  @"CurrentIPAddress",
                                                                  @"External IP Address",
                                                                  @"CellIPAddress",
@@ -859,16 +851,10 @@
                                                                  @"InactiveMemory (Formatted)",
                                                                  @"WiredMemory (Not Formatted)",
                                                                  @"WiredMemory (Formatted)",
-                                                                 @"PurgableMemory (Not Formatted)",
-                                                                 @"PurgableMemory (Formatted)",
-                                                                 @"DeviceOrientation",
                                                                  @"Country",
                                                                  @"Language",
                                                                  @"TimeZone",
                                                                  @"Currency",
-                                                                 @"ApplicationVersion",
-                                                                 @"CFUUID",
-                                                                 @"CPUUsage",
                                                                  nil]];
     
     // Check if Dictionary is populated
