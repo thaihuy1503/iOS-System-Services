@@ -75,7 +75,7 @@
                 return nil;
             }
             // Convert that float to a string
-            diskSpace = [NSString stringWithFormat:@"%.f%%", PercentDiskSpace];
+            diskSpace = [NSString stringWithFormat:@"%.f", PercentDiskSpace];
         } else {
             // Turn that long long into a string
             diskSpace = [self formatMemory:Space];
@@ -135,7 +135,7 @@
                 return nil;
             }
             // Convert that float to a string
-            usedDiskSpace = [NSString stringWithFormat:@"%.f%%", percentUsedDiskSpace];
+            usedDiskSpace = [NSString stringWithFormat:@"%.f", percentUsedDiskSpace];
         } else {
             // Turn that long long into a string
             usedDiskSpace = [self formatMemory:uds];
@@ -241,7 +241,7 @@
 		
         // Display them appropriately
 		if (totalGB >= 1.0) {
-            formattedBytes = [NSString stringWithFormat:@"%.2f GB", totalGB];
+            formattedBytes = [NSString stringWithFormat:@"%.2f", totalGB];
 	    } else if (totalMB >= 1)
             formattedBytes = [NSString stringWithFormat:@"%.2f MB", totalMB];
 		else {

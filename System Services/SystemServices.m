@@ -393,7 +393,7 @@
     NSString *diskSpace = [self diskSpace];
     //NSString *freeDiskSpaceNO = [self freeDiskSpaceinRaw];
     NSString *freeDiskSpaceYES = [self freeDiskSpaceinPercent];
-   // NSString *usedDiskSpaceNO = [self usedDiskSpaceinRaw];
+    NSString *usedDiskSpaceNO = [self usedDiskSpaceinRaw];
     NSString *usedDiskSpaceYES = [self usedDiskSpaceinPercent];
     NSString *longDiskSpace = [NSString stringWithFormat:@"%lld", [self longDiskSpace]];
     NSString *longFreeDiskSpace = [NSString stringWithFormat:@"%lld", [self longFreeDiskSpace]];
@@ -796,19 +796,19 @@
                                                                  @"ScreenWidth",
                                                                  @"ScreenHeight",
                                                                  @"ScreenBrightness",
-                                                                 @"MultitaskingEnabled",
-                                                                 @"ProximitySensorEnabled",
-                                                                 @"DebuggerAttached",
-                                                                 @"PluggedIn",
-                                                                 @"StepCountingAvailable",
-                                                                 @"DistanceAvailable",
-                                                                 @"FloorCountingAvailable",
+                                                                 @"MultitaskingEnabled_bool",
+                                                                 @"ProximitySensorEnabled_bool",
+                                                                 @"DebuggerAttached_bool",
+                                                                 @"PluggedIn_bool",
+                                                                 @"StepCountingAvailable_bool",
+                                                                 @"DistanceAvailable_bool",
+                                                                 @"FloorCountingAvailable_bool",
                                                                  @"Jailbroken",
                                                                  @"NumberProcessors",
                                                                  @"NumberActiveProcessors",
                                                                  @"ProcessorsUsage",
-                                                                 @"AccessoriesAttached",
-                                                                 @"HeadphonesAttached",
+                                                                 @"AccessoriesAttached_bool",
+                                                                 @"HeadphonesAttached_bool",
                                                                  @"NumberAttachedAccessories",
                                                                  @"NameAttachedAccessories",
                                                                  @"CarrierName",
@@ -816,7 +816,7 @@
                                                                  @"CarrierMobileCountryCode",
                                                                  @"CarrierISOCountryCode",
                                                                  @"CarrierMobileNetworkCode",
-                                                                 @"CarrierAllowsVOIP",
+                                                                 @"CarrierAllowsVOIP_bool",
                                                                  @"BatteryLevel",
                                                                  @"Charging",
                                                                  @"CurrentIPAddress",
@@ -828,10 +828,10 @@
                                                                  @"WiFiNetmaskAddress",
                                                                  @"WiFiBroadcastAddress",
                                                                  @"WiFiRouterAddress",
-                                                                 @"ConnectedToWiFi",
-                                                                 @"ConnectedToCellNetwork",
+                                                                 @"ConnectedToWiFi_bool",
+                                                                 @"ConnectedToCellNetwork_bool",
                                                                  @"ProcessID",
-                                                                 @"DiskSpace",
+                                                                 @"DiskSpace_gb",
                                                                  @"FreeDiskSpace_percent",
                                                                  @"UsedDiskSpace_percent",
                                                                  @"LongDiskSpace_byte",
